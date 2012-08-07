@@ -1,0 +1,233 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B944A0DE15D0E1DC00DDB56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0DD15D0E1DC00DDB56F /* Foundation.framework */; };
+		B944A0E415D0E1DC00DDB56F /* BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A0E315D0E1DC00DDB56F /* BGSyntaxHighlighter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B944A0DA15D0E1DC00DDB56F /* libBGSyntaxHighlighter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBGSyntaxHighlighter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B944A0DD15D0E1DC00DDB56F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B944A0E115D0E1DC00DDB56F /* BGSyntaxHighlighter-Prefix.pch */ = {isa = PBXFileReference; path = "BGSyntaxHighlighter-Prefix.pch"; sourceTree = "<group>"; };
+		B944A0E215D0E1DC00DDB56F /* BGSyntaxHighlighter.h */ = {isa = PBXFileReference; path = BGSyntaxHighlighter.h; sourceTree = "<group>"; };
+		B944A0E315D0E1DC00DDB56F /* BGSyntaxHighlighter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlighter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B944A0D715D0E1DC00DDB56F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B944A0DE15D0E1DC00DDB56F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B944A0CF15D0E1DC00DDB56F = {
+			isa = PBXGroup;
+			children = (
+				B944A0DF15D0E1DC00DDB56F /* BGSyntaxHighlighter */,
+				B944A0DC15D0E1DC00DDB56F /* Frameworks */,
+				B944A0DB15D0E1DC00DDB56F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B944A0DB15D0E1DC00DDB56F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B944A0DA15D0E1DC00DDB56F /* libBGSyntaxHighlighter.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B944A0DC15D0E1DC00DDB56F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B944A0DD15D0E1DC00DDB56F /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B944A0DF15D0E1DC00DDB56F /* BGSyntaxHighlighter */ = {
+			isa = PBXGroup;
+			children = (
+				B944A0E215D0E1DC00DDB56F /* BGSyntaxHighlighter.h */,
+				B944A0E315D0E1DC00DDB56F /* BGSyntaxHighlighter.m */,
+				B944A0E015D0E1DC00DDB56F /* Supporting Files */,
+			);
+			path = BGSyntaxHighlighter;
+			sourceTree = "<group>";
+		};
+		B944A0E015D0E1DC00DDB56F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B944A0E115D0E1DC00DDB56F /* BGSyntaxHighlighter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		B944A0D815D0E1DC00DDB56F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		B944A0D915D0E1DC00DDB56F /* BGSyntaxHighlighter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B944A0E715D0E1DC00DDB56F /* Build configuration list for PBXNativeTarget "BGSyntaxHighlighter" */;
+			buildPhases = (
+				B944A0D615D0E1DC00DDB56F /* Sources */,
+				B944A0D715D0E1DC00DDB56F /* Frameworks */,
+				B944A0D815D0E1DC00DDB56F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BGSyntaxHighlighter;
+			productName = BGSyntaxHighlighter;
+			productReference = B944A0DA15D0E1DC00DDB56F /* libBGSyntaxHighlighter.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B944A0D115D0E1DC00DDB56F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = B944A0D415D0E1DC00DDB56F /* Build configuration list for PBXProject "BGSyntaxHighlighter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B944A0CF15D0E1DC00DDB56F;
+			productRefGroup = B944A0DB15D0E1DC00DDB56F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B944A0D915D0E1DC00DDB56F /* BGSyntaxHighlighter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B944A0D615D0E1DC00DDB56F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B944A0E415D0E1DC00DDB56F /* BGSyntaxHighlighter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B944A0E515D0E1DC00DDB56F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B944A0E615D0E1DC00DDB56F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B944A0E815D0E1DC00DDB56F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/BGSyntaxHighlighter.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BGSyntaxHighlighter/BGSyntaxHighlighter-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		B944A0E915D0E1DC00DDB56F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/BGSyntaxHighlighter.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BGSyntaxHighlighter/BGSyntaxHighlighter-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B944A0D415D0E1DC00DDB56F /* Build configuration list for PBXProject "BGSyntaxHighlighter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B944A0E515D0E1DC00DDB56F /* Debug */,
+				B944A0E615D0E1DC00DDB56F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B944A0E715D0E1DC00DDB56F /* Build configuration list for PBXNativeTarget "BGSyntaxHighlighter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B944A0E815D0E1DC00DDB56F /* Debug */,
+				B944A0E915D0E1DC00DDB56F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B944A0D115D0E1DC00DDB56F /* Project object */;
+}
