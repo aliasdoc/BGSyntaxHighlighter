@@ -9,14 +9,80 @@
 /* Begin PBXBuildFile section */
 		B944A0DE15D0E1DC00DDB56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0DD15D0E1DC00DDB56F /* Foundation.framework */; };
 		B944A0E415D0E1DC00DDB56F /* BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A0E315D0E1DC00DDB56F /* BGSyntaxHighlighter.m */; };
+		B944A0F115D0E22B00DDB56F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0F015D0E22B00DDB56F /* UIKit.framework */; };
+		B944A0F215D0E22B00DDB56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0DD15D0E1DC00DDB56F /* Foundation.framework */; };
+		B944A0F415D0E22B00DDB56F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0F315D0E22B00DDB56F /* CoreGraphics.framework */; };
+		B944A0FA15D0E22B00DDB56F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B944A0F815D0E22B00DDB56F /* InfoPlist.strings */; };
+		B944A0FC15D0E22B00DDB56F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A0FB15D0E22B00DDB56F /* main.m */; };
+		B944A10015D0E22B00DDB56F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A0FF15D0E22B00DDB56F /* AppDelegate.m */; };
+		B944A10A15D0E24800DDB56F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0F015D0E22B00DDB56F /* UIKit.framework */; };
+		B944A10B15D0E24800DDB56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0DD15D0E1DC00DDB56F /* Foundation.framework */; };
+		B944A10C15D0E24800DDB56F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0F315D0E22B00DDB56F /* CoreGraphics.framework */; };
+		B944A11215D0E24800DDB56F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B944A11015D0E24800DDB56F /* InfoPlist.strings */; };
+		B944A11415D0E24800DDB56F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A11315D0E24800DDB56F /* main.m */; };
+		B944A11815D0E24800DDB56F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A11715D0E24800DDB56F /* AppDelegate.m */; };
+		B944A11B15D0E24800DDB56F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A11A15D0E24800DDB56F /* ViewController.m */; };
+		B944A11E15D0E24800DDB56F /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B944A11C15D0E24800DDB56F /* ViewController_iPhone.xib */; };
+		B944A12115D0E24800DDB56F /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = B944A11F15D0E24800DDB56F /* ViewController_iPad.xib */; };
+		B944A18D15D2A3CF00DDB56F /* BGSyntaxHighlightView.h in Headers */ = {isa = PBXBuildFile; fileRef = B944A18B15D2A3CF00DDB56F /* BGSyntaxHighlightView.h */; };
+		B944A18E15D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A18C15D2A3CF00DDB56F /* BGSyntaxHighlightView.m */; };
+		B944A18F15D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A18C15D2A3CF00DDB56F /* BGSyntaxHighlightView.m */; };
+		B944A19015D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A18C15D2A3CF00DDB56F /* BGSyntaxHighlightView.m */; };
+		B944A19515D2A41600DDB56F /* BGSyntaxHighlightLineCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B944A19315D2A41600DDB56F /* BGSyntaxHighlightLineCell.h */; };
+		B944A19615D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19415D2A41600DDB56F /* BGSyntaxHighlightLineCell.m */; };
+		B944A19715D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19415D2A41600DDB56F /* BGSyntaxHighlightLineCell.m */; };
+		B944A19815D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19415D2A41600DDB56F /* BGSyntaxHighlightLineCell.m */; };
+		B944A19C15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.h in Headers */ = {isa = PBXBuildFile; fileRef = B944A19A15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.h */; };
+		B944A19D15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19B15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m */; };
+		B944A19E15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19B15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m */; };
+		B944A19F15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19B15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m */; };
+		B944A1A315D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.h in Headers */ = {isa = PBXBuildFile; fileRef = B944A1A115D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.h */; };
+		B944A1A415D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A1A215D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m */; };
+		B944A1A515D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A1A215D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m */; };
+		B944A1A615D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A1A215D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m */; };
+		B944A1B015D2A4DA00DDB56F /* BGCodeObject.h in Headers */ = {isa = PBXBuildFile; fileRef = B944A1AE15D2A4DA00DDB56F /* BGCodeObject.h */; };
+		B944A1B115D2A4DA00DDB56F /* BGCodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */; };
+		B944A1B215D2A4DA00DDB56F /* BGCodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */; };
+		B944A1B315D2A4DA00DDB56F /* BGCodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B944A0DA15D0E1DC00DDB56F /* libBGSyntaxHighlighter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBGSyntaxHighlighter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B944A0DD15D0E1DC00DDB56F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		B944A0E115D0E1DC00DDB56F /* BGSyntaxHighlighter-Prefix.pch */ = {isa = PBXFileReference; path = "BGSyntaxHighlighter-Prefix.pch"; sourceTree = "<group>"; };
-		B944A0E215D0E1DC00DDB56F /* BGSyntaxHighlighter.h */ = {isa = PBXFileReference; path = BGSyntaxHighlighter.h; sourceTree = "<group>"; };
+		B944A0E115D0E1DC00DDB56F /* BGSyntaxHighlighter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BGSyntaxHighlighter-Prefix.pch"; sourceTree = "<group>"; };
+		B944A0E215D0E1DC00DDB56F /* BGSyntaxHighlighter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGSyntaxHighlighter.h; sourceTree = "<group>"; };
 		B944A0E315D0E1DC00DDB56F /* BGSyntaxHighlighter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlighter.m; sourceTree = "<group>"; };
+		B944A0EE15D0E22A00DDB56F /* BGSyntaxHighlighterTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGSyntaxHighlighterTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B944A0F015D0E22B00DDB56F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B944A0F315D0E22B00DDB56F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B944A0F715D0E22B00DDB56F /* BGSyntaxHighlighterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BGSyntaxHighlighterTests-Info.plist"; sourceTree = "<group>"; };
+		B944A0F915D0E22B00DDB56F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B944A0FB15D0E22B00DDB56F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B944A0FD15D0E22B00DDB56F /* BGSyntaxHighlighterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BGSyntaxHighlighterTests-Prefix.pch"; sourceTree = "<group>"; };
+		B944A0FE15D0E22B00DDB56F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B944A0FF15D0E22B00DDB56F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B944A10815D0E24800DDB56F /* BGSyntaxHighlighterDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGSyntaxHighlighterDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B944A10F15D0E24800DDB56F /* BGSyntaxHighlighterDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BGSyntaxHighlighterDemoApp-Info.plist"; sourceTree = "<group>"; };
+		B944A11115D0E24800DDB56F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B944A11315D0E24800DDB56F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B944A11515D0E24800DDB56F /* BGSyntaxHighlighterDemoApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BGSyntaxHighlighterDemoApp-Prefix.pch"; sourceTree = "<group>"; };
+		B944A11615D0E24800DDB56F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B944A11715D0E24800DDB56F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B944A11915D0E24800DDB56F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B944A11A15D0E24800DDB56F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B944A11D15D0E24800DDB56F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
+		B944A12015D0E24800DDB56F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		B944A18B15D2A3CF00DDB56F /* BGSyntaxHighlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSyntaxHighlightView.h; sourceTree = "<group>"; };
+		B944A18C15D2A3CF00DDB56F /* BGSyntaxHighlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightView.m; sourceTree = "<group>"; };
+		B944A19315D2A41600DDB56F /* BGSyntaxHighlightLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSyntaxHighlightLineCell.h; sourceTree = "<group>"; };
+		B944A19415D2A41600DDB56F /* BGSyntaxHighlightLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightLineCell.m; sourceTree = "<group>"; };
+		B944A19A15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BGSyntaxHighlighter.h"; sourceTree = "<group>"; };
+		B944A19B15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BGSyntaxHighlighter.m"; sourceTree = "<group>"; };
+		B944A1A115D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+BGSyntaxHighlighter.h"; sourceTree = "<group>"; };
+		B944A1A215D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+BGSyntaxHighlighter.m"; sourceTree = "<group>"; };
+		B944A1AE15D2A4DA00DDB56F /* BGCodeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCodeObject.h; sourceTree = "<group>"; };
+		B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCodeObject.m; sourceTree = "<group>"; };
+		B944A1B415D2A4FA00DDB56F /* BGSConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGSConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -28,6 +94,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B944A0EB15D0E22A00DDB56F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B944A0F115D0E22B00DDB56F /* UIKit.framework in Frameworks */,
+				B944A0F215D0E22B00DDB56F /* Foundation.framework in Frameworks */,
+				B944A0F415D0E22B00DDB56F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B944A10515D0E24800DDB56F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B944A10A15D0E24800DDB56F /* UIKit.framework in Frameworks */,
+				B944A10B15D0E24800DDB56F /* Foundation.framework in Frameworks */,
+				B944A10C15D0E24800DDB56F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -35,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				B944A0DF15D0E1DC00DDB56F /* BGSyntaxHighlighter */,
+				B944A0F515D0E22B00DDB56F /* BGSyntaxHighlighterTests */,
+				B944A10D15D0E24800DDB56F /* BGSyntaxHighlighterDemoApp */,
 				B944A0DC15D0E1DC00DDB56F /* Frameworks */,
 				B944A0DB15D0E1DC00DDB56F /* Products */,
 			);
@@ -44,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				B944A0DA15D0E1DC00DDB56F /* libBGSyntaxHighlighter.a */,
+				B944A0EE15D0E22A00DDB56F /* BGSyntaxHighlighterTests.app */,
+				B944A10815D0E24800DDB56F /* BGSyntaxHighlighterDemoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -52,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				B944A0DD15D0E1DC00DDB56F /* Foundation.framework */,
+				B944A0F015D0E22B00DDB56F /* UIKit.framework */,
+				B944A0F315D0E22B00DDB56F /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -59,8 +151,12 @@
 		B944A0DF15D0E1DC00DDB56F /* BGSyntaxHighlighter */ = {
 			isa = PBXGroup;
 			children = (
+				B944A1B415D2A4FA00DDB56F /* BGSConstants.h */,
 				B944A0E215D0E1DC00DDB56F /* BGSyntaxHighlighter.h */,
 				B944A0E315D0E1DC00DDB56F /* BGSyntaxHighlighter.m */,
+				B944A1A715D2A49B00DDB56F /* Model */,
+				B944A19915D2A42E00DDB56F /* Common */,
+				B944A19115D2A3DF00DDB56F /* View */,
 				B944A0E015D0E1DC00DDB56F /* Supporting Files */,
 			);
 			path = BGSyntaxHighlighter;
@@ -74,6 +170,91 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		B944A0F515D0E22B00DDB56F /* BGSyntaxHighlighterTests */ = {
+			isa = PBXGroup;
+			children = (
+				B944A0FE15D0E22B00DDB56F /* AppDelegate.h */,
+				B944A0FF15D0E22B00DDB56F /* AppDelegate.m */,
+				B944A0F615D0E22B00DDB56F /* Supporting Files */,
+			);
+			path = BGSyntaxHighlighterTests;
+			sourceTree = "<group>";
+		};
+		B944A0F615D0E22B00DDB56F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B944A0F715D0E22B00DDB56F /* BGSyntaxHighlighterTests-Info.plist */,
+				B944A0F815D0E22B00DDB56F /* InfoPlist.strings */,
+				B944A0FB15D0E22B00DDB56F /* main.m */,
+				B944A0FD15D0E22B00DDB56F /* BGSyntaxHighlighterTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B944A10D15D0E24800DDB56F /* BGSyntaxHighlighterDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				B944A11615D0E24800DDB56F /* AppDelegate.h */,
+				B944A11715D0E24800DDB56F /* AppDelegate.m */,
+				B944A11915D0E24800DDB56F /* ViewController.h */,
+				B944A11A15D0E24800DDB56F /* ViewController.m */,
+				B944A11C15D0E24800DDB56F /* ViewController_iPhone.xib */,
+				B944A11F15D0E24800DDB56F /* ViewController_iPad.xib */,
+				B944A10E15D0E24800DDB56F /* Supporting Files */,
+			);
+			path = BGSyntaxHighlighterDemoApp;
+			sourceTree = "<group>";
+		};
+		B944A10E15D0E24800DDB56F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B944A10F15D0E24800DDB56F /* BGSyntaxHighlighterDemoApp-Info.plist */,
+				B944A11015D0E24800DDB56F /* InfoPlist.strings */,
+				B944A11315D0E24800DDB56F /* main.m */,
+				B944A11515D0E24800DDB56F /* BGSyntaxHighlighterDemoApp-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B944A19115D2A3DF00DDB56F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B944A19215D2A3EA00DDB56F /* Cell */,
+				B944A18B15D2A3CF00DDB56F /* BGSyntaxHighlightView.h */,
+				B944A18C15D2A3CF00DDB56F /* BGSyntaxHighlightView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		B944A19215D2A3EA00DDB56F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				B944A19315D2A41600DDB56F /* BGSyntaxHighlightLineCell.h */,
+				B944A19415D2A41600DDB56F /* BGSyntaxHighlightLineCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		B944A19915D2A42E00DDB56F /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B944A19A15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.h */,
+				B944A19B15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m */,
+				B944A1A115D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.h */,
+				B944A1A215D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		B944A1A715D2A49B00DDB56F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B944A1AE15D2A4DA00DDB56F /* BGCodeObject.h */,
+				B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -81,6 +262,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B944A18D15D2A3CF00DDB56F /* BGSyntaxHighlightView.h in Headers */,
+				B944A19515D2A41600DDB56F /* BGSyntaxHighlightLineCell.h in Headers */,
+				B944A19C15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.h in Headers */,
+				B944A1A315D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.h in Headers */,
+				B944A1B015D2A4DA00DDB56F /* BGCodeObject.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +290,40 @@
 			productReference = B944A0DA15D0E1DC00DDB56F /* libBGSyntaxHighlighter.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		B944A0ED15D0E22A00DDB56F /* BGSyntaxHighlighterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B944A10115D0E22B00DDB56F /* Build configuration list for PBXNativeTarget "BGSyntaxHighlighterTests" */;
+			buildPhases = (
+				B944A0EA15D0E22A00DDB56F /* Sources */,
+				B944A0EB15D0E22A00DDB56F /* Frameworks */,
+				B944A0EC15D0E22A00DDB56F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BGSyntaxHighlighterTests;
+			productName = BGSyntaxHighlighterTests;
+			productReference = B944A0EE15D0E22A00DDB56F /* BGSyntaxHighlighterTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B944A10715D0E24800DDB56F /* BGSyntaxHighlighterDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B944A12215D0E24800DDB56F /* Build configuration list for PBXNativeTarget "BGSyntaxHighlighterDemoApp" */;
+			buildPhases = (
+				B944A10415D0E24800DDB56F /* Sources */,
+				B944A10515D0E24800DDB56F /* Frameworks */,
+				B944A10615D0E24800DDB56F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BGSyntaxHighlighterDemoApp;
+			productName = BGSyntaxHighlighterDemoApp;
+			productReference = B944A10815D0E24800DDB56F /* BGSyntaxHighlighterDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -125,9 +345,32 @@
 			projectRoot = "";
 			targets = (
 				B944A0D915D0E1DC00DDB56F /* BGSyntaxHighlighter */,
+				B944A0ED15D0E22A00DDB56F /* BGSyntaxHighlighterTests */,
+				B944A10715D0E24800DDB56F /* BGSyntaxHighlighterDemoApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B944A0EC15D0E22A00DDB56F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B944A0FA15D0E22B00DDB56F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B944A10615D0E24800DDB56F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B944A11215D0E24800DDB56F /* InfoPlist.strings in Resources */,
+				B944A11E15D0E24800DDB56F /* ViewController_iPhone.xib in Resources */,
+				B944A12115D0E24800DDB56F /* ViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B944A0D615D0E1DC00DDB56F /* Sources */ = {
@@ -135,10 +378,79 @@
 			buildActionMask = 2147483647;
 			files = (
 				B944A0E415D0E1DC00DDB56F /* BGSyntaxHighlighter.m in Sources */,
+				B944A18E15D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */,
+				B944A19615D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */,
+				B944A19D15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */,
+				B944A1A415D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */,
+				B944A1B115D2A4DA00DDB56F /* BGCodeObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B944A0EA15D0E22A00DDB56F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B944A0FC15D0E22B00DDB56F /* main.m in Sources */,
+				B944A10015D0E22B00DDB56F /* AppDelegate.m in Sources */,
+				B944A18F15D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */,
+				B944A19715D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */,
+				B944A19E15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */,
+				B944A1A515D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */,
+				B944A1B215D2A4DA00DDB56F /* BGCodeObject.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B944A10415D0E24800DDB56F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B944A11415D0E24800DDB56F /* main.m in Sources */,
+				B944A11815D0E24800DDB56F /* AppDelegate.m in Sources */,
+				B944A11B15D0E24800DDB56F /* ViewController.m in Sources */,
+				B944A19015D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */,
+				B944A19815D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */,
+				B944A19F15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */,
+				B944A1A615D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */,
+				B944A1B315D2A4DA00DDB56F /* BGCodeObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B944A0F815D0E22B00DDB56F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B944A0F915D0E22B00DDB56F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B944A11015D0E24800DDB56F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B944A11115D0E24800DDB56F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B944A11C15D0E24800DDB56F /* ViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B944A11D15D0E24800DDB56F /* en */,
+			);
+			name = ViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		B944A11F15D0E24800DDB56F /* ViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B944A12015D0E24800DDB56F /* en */,
+			);
+			name = ViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B944A0E515D0E1DC00DDB56F /* Debug */ = {
@@ -207,6 +519,60 @@
 			};
 			name = Release;
 		};
+		B944A10215D0E22B00DDB56F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Prefix.pch";
+				INFOPLIST_FILE = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B944A10315D0E22B00DDB56F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Prefix.pch";
+				INFOPLIST_FILE = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B944A12315D0E24800DDB56F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Prefix.pch";
+				INFOPLIST_FILE = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B944A12415D0E24800DDB56F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Prefix.pch";
+				INFOPLIST_FILE = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Info.plist";
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -224,6 +590,22 @@
 			buildConfigurations = (
 				B944A0E815D0E1DC00DDB56F /* Debug */,
 				B944A0E915D0E1DC00DDB56F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B944A10115D0E22B00DDB56F /* Build configuration list for PBXNativeTarget "BGSyntaxHighlighterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B944A10215D0E22B00DDB56F /* Debug */,
+				B944A10315D0E22B00DDB56F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B944A12215D0E24800DDB56F /* Build configuration list for PBXNativeTarget "BGSyntaxHighlighterDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B944A12315D0E24800DDB56F /* Debug */,
+				B944A12415D0E24800DDB56F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
