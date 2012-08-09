@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface BGCodeObject : NSObject
-
+- (id)initWithCodeString:(NSString*)codeString;
+- (NSAttributedString*)codeForLineAtIndex:(NSInteger)index;
+- (NSInteger)numberOfCodeLines;
 @end

@@ -62,6 +62,11 @@
 		B9948BAD15D3882B0044015E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948BAB15D388240044015E /* CoreText.framework */; };
 		B9948BAE15D3882B0044015E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948BAB15D388240044015E /* CoreText.framework */; };
 		B9948BAF15D3882D0044015E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948BAB15D388240044015E /* CoreText.framework */; };
+		B9948BB215D389160044015E /* BGCodeObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BB115D389160044015E /* BGCodeObjectTests.m */; };
+		B9948BBC15D38A670044015E /* NSBundle+SyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BBB15D38A670044015E /* NSBundle+SyntaxHighlighter.m */; };
+		B9948BBF15D40E330044015E /* mockObjective-C.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9948BB615D389E20044015E /* mockObjective-C.txt */; };
+		B9948BC015D410DF0044015E /* mockObjective-C.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9948BB615D389E20044015E /* mockObjective-C.txt */; };
+		B9948BC115D411190044015E /* NSBundle+SyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BBB15D38A670044015E /* NSBundle+SyntaxHighlighter.m */; };
 		D3B1AC11E4F249D293C46F8A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD2773142144B8CBB4F64ED /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -105,6 +110,10 @@
 		B9948B9F15D387CE0044015E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		B9948BA115D387EA0044015E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		B9948BAB15D388240044015E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		B9948BB115D389160044015E /* BGCodeObjectTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCodeObjectTests.m; sourceTree = "<group>"; };
+		B9948BB615D389E20044015E /* mockObjective-C.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mockObjective-C.txt"; sourceTree = "<group>"; };
+		B9948BBA15D38A670044015E /* NSBundle+SyntaxHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SyntaxHighlighter.h"; sourceTree = "<group>"; };
+		B9948BBB15D38A670044015E /* NSBundle+SyntaxHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SyntaxHighlighter.m"; sourceTree = "<group>"; };
 		BFD2773142144B8CBB4F64ED /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07BB677B1E646C3AFDB133A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -225,6 +234,9 @@
 		B944A0F515D0E22B00DDB56F /* BGSyntaxHighlighterTests */ = {
 			isa = PBXGroup;
 			children = (
+				B9948BB915D38A1D0044015E /* Support */,
+				B9948BB415D389AD0044015E /* Resouces */,
+				B9948BB015D388FE0044015E /* Model */,
 				B944A0F615D0E22B00DDB56F /* Supporting Files */,
 			);
 			path = BGSyntaxHighlighterTests;
@@ -303,6 +315,39 @@
 				B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		B9948BB015D388FE0044015E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B9948BB115D389160044015E /* BGCodeObjectTests.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B9948BB415D389AD0044015E /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				B9948BB515D389B90044015E /* Code raw */,
+			);
+			name = Resouces;
+			sourceTree = "<group>";
+		};
+		B9948BB515D389B90044015E /* Code raw */ = {
+			isa = PBXGroup;
+			children = (
+				B9948BB615D389E20044015E /* mockObjective-C.txt */,
+			);
+			name = "Code raw";
+			sourceTree = "<group>";
+		};
+		B9948BB915D38A1D0044015E /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				B9948BBA15D38A670044015E /* NSBundle+SyntaxHighlighter.h */,
+				B9948BBB15D38A670044015E /* NSBundle+SyntaxHighlighter.m */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B944A0FA15D0E22B00DDB56F /* InfoPlist.strings in Resources */,
+				B9948BBF15D40E330044015E /* mockObjective-C.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +464,7 @@
 				B944A11215D0E24800DDB56F /* InfoPlist.strings in Resources */,
 				B944A11E15D0E24800DDB56F /* ViewController_iPhone.xib in Resources */,
 				B944A12115D0E24800DDB56F /* ViewController_iPad.xib in Resources */,
+				B9948BC015D410DF0044015E /* mockObjective-C.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +510,8 @@
 				B944A19E15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */,
 				B944A1A515D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */,
 				B944A1B215D2A4DA00DDB56F /* BGCodeObject.m in Sources */,
+				B9948BB215D389160044015E /* BGCodeObjectTests.m in Sources */,
+				B9948BBC15D38A670044015E /* NSBundle+SyntaxHighlighter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +527,7 @@
 				B944A19F15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */,
 				B944A1A615D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */,
 				B944A1B315D2A4DA00DDB56F /* BGCodeObject.m in Sources */,
+				B9948BC115D411190044015E /* NSBundle+SyntaxHighlighter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

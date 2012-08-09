@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BGCodeObject.h"
 
-@interface BGSyntaxHighlightView : UIView
-
+@interface BGSyntaxHighlightView : UIView<UITableViewDelegate, UITableViewDataSource>
+@property(nonatomic,strong) BGCodeObject* codeObject;
 @end

@@ -6,8 +6,30 @@
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
-#import "BGCodeObject.h"
+#import "BGCodeObject.h" 
+
+@interface BGCodeObject()
+@property NSMutableArray *lines;
+@end
 
 @implementation BGCodeObject
+@synthesize lines = _lines;
 
+- (id)initWithCodeString:(NSString *)codeString {
+    
+    self = [super init];
+    if(self) {
+        NSArray *lines = [codeString componentsSeparatedByString:@"\n"];
+        self.lines = [NSMutableArray arrayWithArray:lines];
+    }
+    return self;
+}
+
+- (NSInteger)numberOfCodeLines {
+    return [self.lines count];
+}
+
+- (NSAttributedString *)codeForLineAtIndex:(NSInteger)index {
+    return [[NSAttributedString alloc] initWithString:[self.lines objectAtIndex:index]];
+}
 @end

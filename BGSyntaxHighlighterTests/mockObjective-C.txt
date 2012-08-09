@@ -1,12 +1,13 @@
 //
-//  BGSyntaxHighlighter.h
+//  mockObjective-C.h
 //  BGSyntaxHighlighter
 //
-//  Created by KAZUMA Ukyo on 12/08/07.
+//  Created by KAZUMA Ukyo on 12/08/09.
 //  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-#import "BGCodeObject.h"
-#import "BGSyntaxHighlightView.h"
+@interface mockObjective_C : NSObject
+
+@end
