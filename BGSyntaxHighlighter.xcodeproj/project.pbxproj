@@ -8,13 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B944A0DE15D0E1DC00DDB56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0DD15D0E1DC00DDB56F /* Foundation.framework */; };
-		B944A0E415D0E1DC00DDB56F /* BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A0E315D0E1DC00DDB56F /* BGSyntaxHighlighter.m */; };
 		B944A0F115D0E22B00DDB56F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0F015D0E22B00DDB56F /* UIKit.framework */; };
 		B944A0F215D0E22B00DDB56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0DD15D0E1DC00DDB56F /* Foundation.framework */; };
 		B944A0F415D0E22B00DDB56F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0F315D0E22B00DDB56F /* CoreGraphics.framework */; };
 		B944A0FA15D0E22B00DDB56F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B944A0F815D0E22B00DDB56F /* InfoPlist.strings */; };
 		B944A0FC15D0E22B00DDB56F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A0FB15D0E22B00DDB56F /* main.m */; };
-		B944A10015D0E22B00DDB56F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A0FF15D0E22B00DDB56F /* AppDelegate.m */; };
 		B944A10A15D0E24800DDB56F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0F015D0E22B00DDB56F /* UIKit.framework */; };
 		B944A10B15D0E24800DDB56F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0DD15D0E1DC00DDB56F /* Foundation.framework */; };
 		B944A10C15D0E24800DDB56F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B944A0F315D0E22B00DDB56F /* CoreGraphics.framework */; };
@@ -44,14 +42,34 @@
 		B944A1B115D2A4DA00DDB56F /* BGCodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */; };
 		B944A1B215D2A4DA00DDB56F /* BGCodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */; };
 		B944A1B315D2A4DA00DDB56F /* BGCodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */; };
+		B9948B9515D386EC0044015E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD2773142144B8CBB4F64ED /* libPods.a */; };
+		B9948B9615D386EC0044015E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD2773142144B8CBB4F64ED /* libPods.a */; };
+		B9948B9815D387890044015E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9715D387890044015E /* CoreLocation.framework */; };
+		B9948B9915D3878D0044015E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9715D387890044015E /* CoreLocation.framework */; };
+		B9948B9A15D3878D0044015E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9715D387890044015E /* CoreLocation.framework */; };
+		B9948B9C15D387C30044015E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9B15D387C30044015E /* Security.framework */; };
+		B9948B9E15D387CA0044015E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9D15D387CA0044015E /* SystemConfiguration.framework */; };
+		B9948BA015D387CF0044015E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9F15D387CE0044015E /* MobileCoreServices.framework */; };
+		B9948BA215D387EA0044015E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948BA115D387EA0044015E /* CFNetwork.framework */; };
+		B9948BA315D387F10044015E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948BA115D387EA0044015E /* CFNetwork.framework */; };
+		B9948BA415D387F10044015E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9F15D387CE0044015E /* MobileCoreServices.framework */; };
+		B9948BA515D387F10044015E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9D15D387CA0044015E /* SystemConfiguration.framework */; };
+		B9948BA615D387F10044015E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9B15D387C30044015E /* Security.framework */; };
+		B9948BA715D387F20044015E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948BA115D387EA0044015E /* CFNetwork.framework */; };
+		B9948BA815D387F20044015E /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9F15D387CE0044015E /* MobileCoreServices.framework */; };
+		B9948BA915D387F20044015E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9D15D387CA0044015E /* SystemConfiguration.framework */; };
+		B9948BAA15D387F20044015E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9B15D387C30044015E /* Security.framework */; };
+		B9948BAD15D3882B0044015E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948BAB15D388240044015E /* CoreText.framework */; };
+		B9948BAE15D3882B0044015E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948BAB15D388240044015E /* CoreText.framework */; };
+		B9948BAF15D3882D0044015E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948BAB15D388240044015E /* CoreText.framework */; };
+		D3B1AC11E4F249D293C46F8A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD2773142144B8CBB4F64ED /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B944A0DA15D0E1DC00DDB56F /* libBGSyntaxHighlighter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBGSyntaxHighlighter.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B944A0DD15D0E1DC00DDB56F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B944A0DD15D0E1DC00DDB56F /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B944A0E115D0E1DC00DDB56F /* BGSyntaxHighlighter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BGSyntaxHighlighter-Prefix.pch"; sourceTree = "<group>"; };
 		B944A0E215D0E1DC00DDB56F /* BGSyntaxHighlighter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGSyntaxHighlighter.h; sourceTree = "<group>"; };
-		B944A0E315D0E1DC00DDB56F /* BGSyntaxHighlighter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlighter.m; sourceTree = "<group>"; };
 		B944A0EE15D0E22A00DDB56F /* BGSyntaxHighlighterTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGSyntaxHighlighterTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B944A0F015D0E22B00DDB56F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B944A0F315D0E22B00DDB56F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -59,8 +77,6 @@
 		B944A0F915D0E22B00DDB56F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B944A0FB15D0E22B00DDB56F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B944A0FD15D0E22B00DDB56F /* BGSyntaxHighlighterTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BGSyntaxHighlighterTests-Prefix.pch"; sourceTree = "<group>"; };
-		B944A0FE15D0E22B00DDB56F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		B944A0FF15D0E22B00DDB56F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B944A10815D0E24800DDB56F /* BGSyntaxHighlighterDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BGSyntaxHighlighterDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B944A10F15D0E24800DDB56F /* BGSyntaxHighlighterDemoApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BGSyntaxHighlighterDemoApp-Info.plist"; sourceTree = "<group>"; };
 		B944A11115D0E24800DDB56F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -83,6 +99,14 @@
 		B944A1AE15D2A4DA00DDB56F /* BGCodeObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCodeObject.h; sourceTree = "<group>"; };
 		B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCodeObject.m; sourceTree = "<group>"; };
 		B944A1B415D2A4FA00DDB56F /* BGSConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGSConstants.h; sourceTree = "<group>"; };
+		B9948B9715D387890044015E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B9948B9B15D387C30044015E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		B9948B9D15D387CA0044015E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B9948B9F15D387CE0044015E /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		B9948BA115D387EA0044015E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		B9948BAB15D388240044015E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		BFD2773142144B8CBB4F64ED /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		D07BB677B1E646C3AFDB133A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,7 +114,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9948BA215D387EA0044015E /* CFNetwork.framework in Frameworks */,
+				B9948BA015D387CF0044015E /* MobileCoreServices.framework in Frameworks */,
+				B9948B9E15D387CA0044015E /* SystemConfiguration.framework in Frameworks */,
+				B9948B9C15D387C30044015E /* Security.framework in Frameworks */,
+				B9948B9815D387890044015E /* CoreLocation.framework in Frameworks */,
 				B944A0DE15D0E1DC00DDB56F /* Foundation.framework in Frameworks */,
+				D3B1AC11E4F249D293C46F8A /* libPods.a in Frameworks */,
+				B9948BAD15D3882B0044015E /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +132,13 @@
 				B944A0F115D0E22B00DDB56F /* UIKit.framework in Frameworks */,
 				B944A0F215D0E22B00DDB56F /* Foundation.framework in Frameworks */,
 				B944A0F415D0E22B00DDB56F /* CoreGraphics.framework in Frameworks */,
+				B9948B9515D386EC0044015E /* libPods.a in Frameworks */,
+				B9948B9915D3878D0044015E /* CoreLocation.framework in Frameworks */,
+				B9948BA315D387F10044015E /* CFNetwork.framework in Frameworks */,
+				B9948BA415D387F10044015E /* MobileCoreServices.framework in Frameworks */,
+				B9948BA515D387F10044015E /* SystemConfiguration.framework in Frameworks */,
+				B9948BA615D387F10044015E /* Security.framework in Frameworks */,
+				B9948BAE15D3882B0044015E /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +149,13 @@
 				B944A10A15D0E24800DDB56F /* UIKit.framework in Frameworks */,
 				B944A10B15D0E24800DDB56F /* Foundation.framework in Frameworks */,
 				B944A10C15D0E24800DDB56F /* CoreGraphics.framework in Frameworks */,
+				B9948B9615D386EC0044015E /* libPods.a in Frameworks */,
+				B9948B9A15D3878D0044015E /* CoreLocation.framework in Frameworks */,
+				B9948BA715D387F20044015E /* CFNetwork.framework in Frameworks */,
+				B9948BA815D387F20044015E /* MobileCoreServices.framework in Frameworks */,
+				B9948BA915D387F20044015E /* SystemConfiguration.framework in Frameworks */,
+				B9948BAA15D387F20044015E /* Security.framework in Frameworks */,
+				B9948BAF15D3882D0044015E /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,6 +170,7 @@
 				B944A10D15D0E24800DDB56F /* BGSyntaxHighlighterDemoApp */,
 				B944A0DC15D0E1DC00DDB56F /* Frameworks */,
 				B944A0DB15D0E1DC00DDB56F /* Products */,
+				D07BB677B1E646C3AFDB133A /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,9 +187,16 @@
 		B944A0DC15D0E1DC00DDB56F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9948BAB15D388240044015E /* CoreText.framework */,
+				B9948BA115D387EA0044015E /* CFNetwork.framework */,
+				B9948B9F15D387CE0044015E /* MobileCoreServices.framework */,
+				B9948B9D15D387CA0044015E /* SystemConfiguration.framework */,
+				B9948B9B15D387C30044015E /* Security.framework */,
+				B9948B9715D387890044015E /* CoreLocation.framework */,
 				B944A0DD15D0E1DC00DDB56F /* Foundation.framework */,
 				B944A0F015D0E22B00DDB56F /* UIKit.framework */,
 				B944A0F315D0E22B00DDB56F /* CoreGraphics.framework */,
+				BFD2773142144B8CBB4F64ED /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -153,7 +206,6 @@
 			children = (
 				B944A1B415D2A4FA00DDB56F /* BGSConstants.h */,
 				B944A0E215D0E1DC00DDB56F /* BGSyntaxHighlighter.h */,
-				B944A0E315D0E1DC00DDB56F /* BGSyntaxHighlighter.m */,
 				B944A1A715D2A49B00DDB56F /* Model */,
 				B944A19915D2A42E00DDB56F /* Common */,
 				B944A19115D2A3DF00DDB56F /* View */,
@@ -173,8 +225,6 @@
 		B944A0F515D0E22B00DDB56F /* BGSyntaxHighlighterTests */ = {
 			isa = PBXGroup;
 			children = (
-				B944A0FE15D0E22B00DDB56F /* AppDelegate.h */,
-				B944A0FF15D0E22B00DDB56F /* AppDelegate.m */,
 				B944A0F615D0E22B00DDB56F /* Supporting Files */,
 			);
 			path = BGSyntaxHighlighterTests;
@@ -280,6 +330,7 @@
 				B944A0D615D0E1DC00DDB56F /* Sources */,
 				B944A0D715D0E1DC00DDB56F /* Frameworks */,
 				B944A0D815D0E1DC00DDB56F /* Headers */,
+				BB5CB0587FFF4F289F38E12F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,12 +423,28 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BB5CB0587FFF4F289F38E12F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B944A0D615D0E1DC00DDB56F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B944A0E415D0E1DC00DDB56F /* BGSyntaxHighlighter.m in Sources */,
 				B944A18E15D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */,
 				B944A19615D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */,
 				B944A19D15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */,
@@ -391,7 +458,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B944A0FC15D0E22B00DDB56F /* main.m in Sources */,
-				B944A10015D0E22B00DDB56F /* AppDelegate.m in Sources */,
 				B944A18F15D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */,
 				B944A19715D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */,
 				B944A19E15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */,
@@ -497,6 +563,7 @@
 		};
 		B944A0E815D0E1DC00DDB56F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D07BB677B1E646C3AFDB133A /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/BGSyntaxHighlighter.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -504,11 +571,13 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
 			};
 			name = Debug;
 		};
 		B944A0E915D0E1DC00DDB56F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D07BB677B1E646C3AFDB133A /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/BGSyntaxHighlighter.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -516,6 +585,7 @@
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
 			};
 			name = Release;
 		};
@@ -525,9 +595,18 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/GHUnitIOS\"",
+					"\"${PODS_ROOT}/Headers/OCMock\"",
+					"\"${PODS_ROOT}/Headers/TTTAttributedLabel\"",
+				);
 				INFOPLIST_FILE = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -538,10 +617,19 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/GHUnitIOS\"",
+					"\"${PODS_ROOT}/Headers/OCMock\"",
+					"\"${PODS_ROOT}/Headers/TTTAttributedLabel\"",
+				);
 				INFOPLIST_FILE = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -552,9 +640,18 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/GHUnitIOS\"",
+					"\"${PODS_ROOT}/Headers/OCMock\"",
+					"\"${PODS_ROOT}/Headers/TTTAttributedLabel\"",
+				);
 				INFOPLIST_FILE = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Info.plist";
+				OTHER_LDFLAGS = "-ObjC";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -565,10 +662,19 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"\"${PODS_ROOT}/Headers\"",
+					"\"${PODS_ROOT}/Headers/GHUnitIOS\"",
+					"\"${PODS_ROOT}/Headers/OCMock\"",
+					"\"${PODS_ROOT}/Headers/TTTAttributedLabel\"",
+				);
 				INFOPLIST_FILE = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				OTHER_LDFLAGS = "-ObjC";
+				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -592,6 +698,7 @@
 				B944A0E915D0E1DC00DDB56F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B944A10115D0E22B00DDB56F /* Build configuration list for PBXNativeTarget "BGSyntaxHighlighterTests" */ = {
 			isa = XCConfigurationList;
@@ -600,6 +707,7 @@
 				B944A10315D0E22B00DDB56F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B944A12215D0E24800DDB56F /* Build configuration list for PBXNativeTarget "BGSyntaxHighlighterDemoApp" */ = {
 			isa = XCConfigurationList;
@@ -608,6 +716,7 @@
 				B944A12415D0E24800DDB56F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
