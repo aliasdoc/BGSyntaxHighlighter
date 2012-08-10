@@ -26,10 +26,6 @@
 		B944A18E15D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A18C15D2A3CF00DDB56F /* BGSyntaxHighlightView.m */; };
 		B944A18F15D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A18C15D2A3CF00DDB56F /* BGSyntaxHighlightView.m */; };
 		B944A19015D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A18C15D2A3CF00DDB56F /* BGSyntaxHighlightView.m */; };
-		B944A19515D2A41600DDB56F /* BGSyntaxHighlightLineCell.h in Headers */ = {isa = PBXBuildFile; fileRef = B944A19315D2A41600DDB56F /* BGSyntaxHighlightLineCell.h */; };
-		B944A19615D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19415D2A41600DDB56F /* BGSyntaxHighlightLineCell.m */; };
-		B944A19715D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19415D2A41600DDB56F /* BGSyntaxHighlightLineCell.m */; };
-		B944A19815D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19415D2A41600DDB56F /* BGSyntaxHighlightLineCell.m */; };
 		B944A19C15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.h in Headers */ = {isa = PBXBuildFile; fileRef = B944A19A15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.h */; };
 		B944A19D15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19B15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m */; };
 		B944A19E15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A19B15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m */; };
@@ -67,6 +63,10 @@
 		B9948BBF15D40E330044015E /* mockObjective-C.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9948BB615D389E20044015E /* mockObjective-C.txt */; };
 		B9948BC015D410DF0044015E /* mockObjective-C.txt in Resources */ = {isa = PBXBuildFile; fileRef = B9948BB615D389E20044015E /* mockObjective-C.txt */; };
 		B9948BC115D411190044015E /* NSBundle+SyntaxHighlighter.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BBB15D38A670044015E /* NSBundle+SyntaxHighlighter.m */; };
+		B9948BC515D4B1550044015E /* BGSyntaxHighlightLineView.h in Headers */ = {isa = PBXBuildFile; fileRef = B9948BC315D4B1550044015E /* BGSyntaxHighlightLineView.h */; };
+		B9948BC615D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BC415D4B1550044015E /* BGSyntaxHighlightLineView.m */; };
+		B9948BC715D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BC415D4B1550044015E /* BGSyntaxHighlightLineView.m */; };
+		B9948BC815D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BC415D4B1550044015E /* BGSyntaxHighlightLineView.m */; };
 		D3B1AC11E4F249D293C46F8A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD2773142144B8CBB4F64ED /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -95,8 +95,6 @@
 		B944A12015D0E24800DDB56F /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
 		B944A18B15D2A3CF00DDB56F /* BGSyntaxHighlightView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSyntaxHighlightView.h; sourceTree = "<group>"; };
 		B944A18C15D2A3CF00DDB56F /* BGSyntaxHighlightView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightView.m; sourceTree = "<group>"; };
-		B944A19315D2A41600DDB56F /* BGSyntaxHighlightLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSyntaxHighlightLineCell.h; sourceTree = "<group>"; };
-		B944A19415D2A41600DDB56F /* BGSyntaxHighlightLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightLineCell.m; sourceTree = "<group>"; };
 		B944A19A15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BGSyntaxHighlighter.h"; sourceTree = "<group>"; };
 		B944A19B15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BGSyntaxHighlighter.m"; sourceTree = "<group>"; };
 		B944A1A115D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+BGSyntaxHighlighter.h"; sourceTree = "<group>"; };
@@ -114,6 +112,8 @@
 		B9948BB615D389E20044015E /* mockObjective-C.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mockObjective-C.txt"; sourceTree = "<group>"; };
 		B9948BBA15D38A670044015E /* NSBundle+SyntaxHighlighter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SyntaxHighlighter.h"; sourceTree = "<group>"; };
 		B9948BBB15D38A670044015E /* NSBundle+SyntaxHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SyntaxHighlighter.m"; sourceTree = "<group>"; };
+		B9948BC315D4B1550044015E /* BGSyntaxHighlightLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSyntaxHighlightLineView.h; sourceTree = "<group>"; };
+		B9948BC415D4B1550044015E /* BGSyntaxHighlightLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightLineView.m; sourceTree = "<group>"; };
 		BFD2773142144B8CBB4F64ED /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07BB677B1E646C3AFDB133A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -281,20 +281,11 @@
 		B944A19115D2A3DF00DDB56F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B944A19215D2A3EA00DDB56F /* Cell */,
+				B9948BC215D4B1250044015E /* Recycle */,
 				B944A18B15D2A3CF00DDB56F /* BGSyntaxHighlightView.h */,
 				B944A18C15D2A3CF00DDB56F /* BGSyntaxHighlightView.m */,
 			);
 			name = View;
-			sourceTree = "<group>";
-		};
-		B944A19215D2A3EA00DDB56F /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				B944A19315D2A41600DDB56F /* BGSyntaxHighlightLineCell.h */,
-				B944A19415D2A41600DDB56F /* BGSyntaxHighlightLineCell.m */,
-			);
-			name = Cell;
 			sourceTree = "<group>";
 		};
 		B944A19915D2A42E00DDB56F /* Common */ = {
@@ -350,6 +341,15 @@
 			name = Support;
 			sourceTree = "<group>";
 		};
+		B9948BC215D4B1250044015E /* Recycle */ = {
+			isa = PBXGroup;
+			children = (
+				B9948BC315D4B1550044015E /* BGSyntaxHighlightLineView.h */,
+				B9948BC415D4B1550044015E /* BGSyntaxHighlightLineView.m */,
+			);
+			name = Recycle;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -358,10 +358,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B944A18D15D2A3CF00DDB56F /* BGSyntaxHighlightView.h in Headers */,
-				B944A19515D2A41600DDB56F /* BGSyntaxHighlightLineCell.h in Headers */,
 				B944A19C15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.h in Headers */,
 				B944A1A315D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.h in Headers */,
 				B944A1B015D2A4DA00DDB56F /* BGCodeObject.h in Headers */,
+				B9948BC515D4B1550044015E /* BGSyntaxHighlightLineView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,10 +493,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B944A18E15D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */,
-				B944A19615D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */,
 				B944A19D15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */,
 				B944A1A415D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */,
 				B944A1B115D2A4DA00DDB56F /* BGCodeObject.m in Sources */,
+				B9948BC615D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,12 +506,12 @@
 			files = (
 				B944A0FC15D0E22B00DDB56F /* main.m in Sources */,
 				B944A18F15D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */,
-				B944A19715D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */,
 				B944A19E15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */,
 				B944A1A515D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */,
 				B944A1B215D2A4DA00DDB56F /* BGCodeObject.m in Sources */,
 				B9948BB215D389160044015E /* BGCodeObjectTests.m in Sources */,
 				B9948BBC15D38A670044015E /* NSBundle+SyntaxHighlighter.m in Sources */,
+				B9948BC715D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,11 +523,11 @@
 				B944A11815D0E24800DDB56F /* AppDelegate.m in Sources */,
 				B944A11B15D0E24800DDB56F /* ViewController.m in Sources */,
 				B944A19015D2A3CF00DDB56F /* BGSyntaxHighlightView.m in Sources */,
-				B944A19815D2A41600DDB56F /* BGSyntaxHighlightLineCell.m in Sources */,
 				B944A19F15D2A45100DDB56F /* UIColor+BGSyntaxHighlighter.m in Sources */,
 				B944A1A615D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */,
 				B944A1B315D2A4DA00DDB56F /* BGCodeObject.m in Sources */,
 				B9948BC115D411190044015E /* NSBundle+SyntaxHighlighter.m in Sources */,
+				B9948BC815D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
