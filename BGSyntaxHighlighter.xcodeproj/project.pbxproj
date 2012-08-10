@@ -67,6 +67,10 @@
 		B9948BC615D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BC415D4B1550044015E /* BGSyntaxHighlightLineView.m */; };
 		B9948BC715D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BC415D4B1550044015E /* BGSyntaxHighlightLineView.m */; };
 		B9948BC815D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BC415D4B1550044015E /* BGSyntaxHighlightLineView.m */; };
+		B9948BCB15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.h in Headers */ = {isa = PBXBuildFile; fileRef = B9948BC915D4B25D0044015E /* BGSyntaxHighlightLineNumberView.h */; };
+		B9948BCC15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BCA15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m */; };
+		B9948BCD15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BCA15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m */; };
+		B9948BCE15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9948BCA15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m */; };
 		D3B1AC11E4F249D293C46F8A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD2773142144B8CBB4F64ED /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -114,6 +118,8 @@
 		B9948BBB15D38A670044015E /* NSBundle+SyntaxHighlighter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SyntaxHighlighter.m"; sourceTree = "<group>"; };
 		B9948BC315D4B1550044015E /* BGSyntaxHighlightLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSyntaxHighlightLineView.h; sourceTree = "<group>"; };
 		B9948BC415D4B1550044015E /* BGSyntaxHighlightLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightLineView.m; sourceTree = "<group>"; };
+		B9948BC915D4B25D0044015E /* BGSyntaxHighlightLineNumberView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSyntaxHighlightLineNumberView.h; sourceTree = "<group>"; };
+		B9948BCA15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightLineNumberView.m; sourceTree = "<group>"; };
 		BFD2773142144B8CBB4F64ED /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D07BB677B1E646C3AFDB133A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -346,6 +352,8 @@
 			children = (
 				B9948BC315D4B1550044015E /* BGSyntaxHighlightLineView.h */,
 				B9948BC415D4B1550044015E /* BGSyntaxHighlightLineView.m */,
+				B9948BC915D4B25D0044015E /* BGSyntaxHighlightLineNumberView.h */,
+				B9948BCA15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m */,
 			);
 			name = Recycle;
 			sourceTree = "<group>";
@@ -362,6 +370,7 @@
 				B944A1A315D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.h in Headers */,
 				B944A1B015D2A4DA00DDB56F /* BGCodeObject.h in Headers */,
 				B9948BC515D4B1550044015E /* BGSyntaxHighlightLineView.h in Headers */,
+				B9948BCB15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +506,7 @@
 				B944A1A415D2A48200DDB56F /* UIFont+BGSyntaxHighlighter.m in Sources */,
 				B944A1B115D2A4DA00DDB56F /* BGCodeObject.m in Sources */,
 				B9948BC615D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */,
+				B9948BCC15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +522,7 @@
 				B9948BB215D389160044015E /* BGCodeObjectTests.m in Sources */,
 				B9948BBC15D38A670044015E /* NSBundle+SyntaxHighlighter.m in Sources */,
 				B9948BC715D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */,
+				B9948BCD15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,6 +539,7 @@
 				B944A1B315D2A4DA00DDB56F /* BGCodeObject.m in Sources */,
 				B9948BC115D411190044015E /* NSBundle+SyntaxHighlighter.m in Sources */,
 				B9948BC815D4B1550044015E /* BGSyntaxHighlightLineView.m in Sources */,
+				B9948BCE15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
