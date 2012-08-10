@@ -9,5 +9,7 @@
 #import "UIFont+BGSyntaxHighlighter.h"
 
 @implementation UIFont (BGSyntaxHighlighter)
-
++ (UIFont *)courierFontOfSize:(CGFloat)size {
+    return [UIFont fontWithName:@"courier" size:size];
+}
 @end
