@@ -66,7 +66,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [[UITableViewCell alloc] init];
     cell.backgroundColor = [UIColor darkGrayColor];
-    cell.textLabel.text = [[self.codeObject codeForLineAtIndex:indexPath.row] string];
+    cell.textLabel.text = [[self.codeObject codeStringForLineAtIndex:indexPath.row] string];
     cell.textLabel.font = [UIFont fontWithName:@"Courier" size:12];
     return cell;
 }

@@ -11,6 +11,7 @@
 
 @interface BGCodeObjectTests : GHTestCase
 {
+    BGCodeObject *codeObject
 }
 @end
 
@@ -31,15 +32,24 @@
 
 - (void)setUp {
     // Run before each test method
+    codeObject = [[BGCodeObject alloc] initWithCodeString:[NSBundle codeStringForResouce:@"mockObjective-C" ofType:@"txt"]];
 }
 
 - (void)tearDown {
     // Run after each test method
+    [codeObject release];
 }
 
-- (void)testNumberOfLinesWithShortObjectiveCCode {
-    BGCodeObject *codeObject = [[BGCodeObject alloc] initWithCodeString:[NSBundle codeStringForResouce:@"mockObjective-C" ofType:@"txt"]];
+#pragma mark - interfaces
+- (void)testNumberOfLines {
     GHAssertEquals(14, [codeObject numberOfCodeLines], @"14行あるはずだが");
 }
+
+- (void)testCodeStringForLineAtIndex {
+    GHAssertEquals(@"//",[codeObject codeStringForLineAtIndex:0], @"1行目はコメントだけ");
+    GHAssertEquals(@"//  mockObjective-C.h",[codeObject codeStringForLineAtIndex:1], @"2行目はファイル名");
+
+}
+
 
 @end
