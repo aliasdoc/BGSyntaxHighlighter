@@ -11,7 +11,7 @@
 
 @interface BGCodeObjectTests : GHTestCase
 {
-    BGCodeObject *codeObject
+    BGCodeObject *codeObject;
 }
 @end
 
@@ -37,7 +37,6 @@
 
 - (void)tearDown {
     // Run after each test method
-    [codeObject release];
 }
 
 #pragma mark - interfaces
@@ -46,8 +45,8 @@
 }
 
 - (void)testCodeStringForLineAtIndex {
-    GHAssertEquals(@"//",[codeObject codeStringForLineAtIndex:0], @"1行目はコメントだけ");
-    GHAssertEquals(@"//  mockObjective-C.h",[codeObject codeStringForLineAtIndex:1], @"2行目はファイル名");
+    GHAssertEqualStrings(@"//", [[codeObject codeStringForLineAtIndex:0] string], @"1行目はコメントだけ");
+    GHAssertEqualStrings(@"//  mockObjective-C.h",[[codeObject codeStringForLineAtIndex:1] string], @"2行目はファイル名");
 
 }
 
