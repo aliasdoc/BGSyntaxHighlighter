@@ -9,6 +9,9 @@
 #ifndef BGSyntaxHighlighter_BGSConstants_h
 #define BGSyntaxHighlighter_BGSConstants_h
 
-
+typedef enum {
+    BGSyntaxHighlighterThemeDark
+    , BGSyntaxHighlighterThemeLight
+} BGSyntaxHighlighterTheme;
 
 #endif
