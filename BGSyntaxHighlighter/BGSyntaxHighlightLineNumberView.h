@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BGSConstants.h"
 
 @interface BGSyntaxHighlightLineNumberView : UIView
-
+@property(nonatomic) NSUInteger lineNumber;
+@property(nonatomic) BGSyntaxHighlighterTheme theme;
 @end
