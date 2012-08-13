@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TTTAttributedLabel.h"
 
 @interface BGSyntaxHighlightLineView : UIView
-
+@property(nonatomic, strong) NSString* codeString;
 @end
