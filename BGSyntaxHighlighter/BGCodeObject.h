@@ -10,6 +10,6 @@
 
 @interface BGCodeObject : NSObject
 - (id)initWithCodeString:(NSString*)codeString;
-- (NSAttributedString*)codeStringForLineAtIndex:(NSInteger)index;
 - (NSInteger)numberOfCodeLines;
+- (NSString*)codeStringForLineAtIndex:(NSInteger)index;
 @end

@@ -29,7 +29,7 @@
     return [self.lines count];
 }
 
-- (NSAttributedString *)codeStringForLineAtIndex:(NSInteger)index {
-    return [[NSAttributedString alloc] initWithString:[self.lines objectAtIndex:index]];
+- (NSString *)codeStringForLineAtIndex:(NSInteger)index {
+    return [self.lines objectAtIndex:index];
 }
 @end
