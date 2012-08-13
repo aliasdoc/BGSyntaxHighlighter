@@ -10,4 +10,7 @@
 
 @interface UIColor (BGSyntaxHighlighter)
 
++ (UIColor*)darkBackgroundColor;
++ (UIColor*)darkBaseTextColor;
+
 @end
