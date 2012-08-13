@@ -40,6 +40,7 @@
 		B944A1B315D2A4DA00DDB56F /* BGCodeObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B944A1AF15D2A4DA00DDB56F /* BGCodeObject.m */; };
 		B954C2E115D4B61800E7FC4A /* UIFont+BGSyntaxHighlighterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B954C2E015D4B61800E7FC4A /* UIFont+BGSyntaxHighlighterTests.m */; };
 		B954C2E415D818E100E7FC4A /* BGSyntaxHighlightLineNumberViewTest.m in Sources */ = {isa = PBXBuildFile; fileRef = B954C2E315D818E100E7FC4A /* BGSyntaxHighlightLineNumberViewTest.m */; };
+		B954C2EA15D8B7A700E7FC4A /* BGSyntaxHighlightLineViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B954C2E915D8B7A700E7FC4A /* BGSyntaxHighlightLineViewTests.m */; };
 		B9948B9515D386EC0044015E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD2773142144B8CBB4F64ED /* libPods.a */; };
 		B9948B9615D386EC0044015E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD2773142144B8CBB4F64ED /* libPods.a */; };
 		B9948B9815D387890044015E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9715D387890044015E /* CoreLocation.framework */; };
@@ -110,6 +111,7 @@
 		B944A1B415D2A4FA00DDB56F /* BGSConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BGSConstants.h; sourceTree = "<group>"; };
 		B954C2E015D4B61800E7FC4A /* UIFont+BGSyntaxHighlighterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+BGSyntaxHighlighterTests.m"; sourceTree = "<group>"; };
 		B954C2E315D818E100E7FC4A /* BGSyntaxHighlightLineNumberViewTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightLineNumberViewTest.m; sourceTree = "<group>"; };
+		B954C2E915D8B7A700E7FC4A /* BGSyntaxHighlightLineViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightLineViewTests.m; sourceTree = "<group>"; };
 		B9948B9715D387890044015E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B9948B9B15D387C30044015E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B9948B9D15D387CA0044015E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -332,6 +334,7 @@
 			isa = PBXGroup;
 			children = (
 				B954C2E315D818E100E7FC4A /* BGSyntaxHighlightLineNumberViewTest.m */,
+				B954C2E915D8B7A700E7FC4A /* BGSyntaxHighlightLineViewTests.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				B9948BCD15D4B25E0044015E /* BGSyntaxHighlightLineNumberView.m in Sources */,
 				B954C2E115D4B61800E7FC4A /* UIFont+BGSyntaxHighlighterTests.m in Sources */,
 				B954C2E415D818E100E7FC4A /* BGSyntaxHighlightLineNumberViewTest.m in Sources */,
+				B954C2EA15D8B7A700E7FC4A /* BGSyntaxHighlightLineViewTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
