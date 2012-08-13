@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "BGCodeObject.h"
 
-@interface BGSyntaxHighlightView : UIView<UITableViewDelegate, UITableViewDataSource>
+@interface BGSyntaxHighlightView : UIView<UIScrollViewDelegate>
 @property(nonatomic,strong) BGCodeObject* codeObject;
 @end
