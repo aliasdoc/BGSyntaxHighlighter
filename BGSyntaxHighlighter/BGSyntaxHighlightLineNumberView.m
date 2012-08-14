@@ -52,7 +52,7 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    self.lineNumberLabel.frame = self.frame;
+    self.lineNumberLabel.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
 }
 
 @end
