@@ -12,4 +12,5 @@
 - (id)initWithCodeString:(NSString*)codeString;
 - (NSInteger)numberOfCodeLines;
 - (NSString*)codeStringForLineAtIndex:(NSInteger)index;
+- (NSString*)maximumLengthStringForCodeLines;
 @end

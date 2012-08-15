@@ -25,11 +25,25 @@
     return self;
 }
 
+
+#pragma mark - methods
+
 - (NSInteger)numberOfCodeLines {
     return [self.lines count];
 }
 
 - (NSString *)codeStringForLineAtIndex:(NSInteger)index {
     return [self.lines objectAtIndex:index];
+}
+
+- (NSString *)maximumLengthStringForCodeLines {
+
+    NSString *maximum = @"";
+    for (NSString *string in self.lines) {
+        if ([string length] > [maximum length]) {
+            maximum = string;
+        }
+    }
+    return maximum;
 }
 @end

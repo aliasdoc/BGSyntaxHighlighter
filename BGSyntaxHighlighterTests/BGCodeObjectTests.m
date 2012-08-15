@@ -49,5 +49,9 @@
     GHAssertEqualStrings(@"//  mockObjective-C.h",[codeObject codeStringForLineAtIndex:1], @"2行目はファイル名");
 }
 
+- (void)testMaximumLengthStringForCodeLines {
+    GHAssertEqualStrings(@"//  Copyright (c) 2012年 __MyCompanyName__. All rights reserved.", [codeObject maximumLengthStringForCodeLines], @"一番長いの返してほしい");
+}
+
 
 @end
