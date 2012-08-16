@@ -22,6 +22,8 @@
 @property(nonatomic, strong) NSMutableArray *lineViews;
 @property(nonatomic, strong) NSMutableSet *recycleLineNumberViews;
 @property(nonatomic, strong) NSMutableSet *recycleLineViews;
+@property(nonatomic) NSRange viewingLinesRange;
+@property(nonatomic) CGFloat beforeContentOffsetY;
 @end
 
 @implementation BGSyntaxHighlightView
@@ -32,6 +34,8 @@
 @synthesize lineViews = _lineViews;
 @synthesize recycleLineNumberViews = _recycleLineNumberViews;
 @synthesize recycleLineViews = _recycleLineViews;
+@synthesize viewingLinesRange = _viewingLinesRange;
+@synthesize beforeContentOffsetY = _beforeContentOffsetY;
 
 - (id)initWithFrame:(CGRect)frame
 {
@@ -50,8 +54,10 @@
     
         self.lineNumberViews = [NSMutableArray array];
         self.lineViews = [NSMutableArray array];
+        self.recycleLineNumberViews = [NSMutableSet set];
         self.recycleLineViews = [NSMutableSet set];
-        self.recycleLineViews = [NSMutableSet set];
+        
+        self.beforeContentOffsetY = 0;
     }
     return self;
 }
@@ -73,12 +79,13 @@
         [self.codeScrollView addSubview:lineView];
         [self.lineViews addObject:lineView];
         
-        if((i+1) * kLineHeight >= self.frame.size.height * kMarginHeightPower) {
+        if((i+1) * kLineHeight >= self.frame.size.height) {
+            self.viewingLinesRange = NSMakeRange(0U, i);
             break;
         }
     }
-    self.lineNumberScrollView.contentSize = CGSizeMake(kLineNumberWidth, 500);
-    self.codeScrollView.contentSize = CGSizeMake(800, 500);
+    self.lineNumberScrollView.contentSize = CGSizeMake(kLineNumberWidth, kLineHeight * [self.codeObject numberOfCodeLines]);
+    self.codeScrollView.contentSize = CGSizeMake(800, kLineHeight * [self.codeObject numberOfCodeLines]);
     
 }
 
@@ -87,6 +94,7 @@
     if(self.recycleLineNumberViews && [self.recycleLineNumberViews count] > 0) {
         BGSyntaxHighlightLineNumberView *view = [self.recycleLineNumberViews anyObject];
         [self.recycleLineNumberViews removeObject:view];
+        NSLog(@"dequeued maxviews %d", [self.lineNumberViews count]);
         return view;
     }
     return nil;
@@ -128,6 +136,41 @@
     else {
         self.lineNumberScrollView.contentOffset = CGPointMake(self.lineNumberScrollView.contentOffset.x, scrollView.contentOffset.y);
     }
+    
+    CGFloat y = scrollView.contentOffset.y;
+    if(y > self.beforeContentOffsetY) {
+        // 下
+        NSInteger bottomLineNumber = self.viewingLinesRange.location + self.viewingLinesRange.length;
+        NSInteger needsBottomLineNumber = (y + scrollView.frame.size.height) / kLineHeight;
+        if(bottomLineNumber > needsBottomLineNumber) {
+            return;
+        }
+        for (NSInteger i = bottomLineNumber+1; i <= needsBottomLineNumber; i++) {
+            BGSyntaxHighlightLineNumberView *lineNumberView = [self lineNumberViewAtRow:i];
+            [self.lineNumberViews addObject:lineNumberView];
+            [self.lineNumberScrollView addSubview:lineNumberView];
+            lineNumberView.frame = CGRectMake(0, kLineHeight *  (i-1), kLineNumberWidth, kLineHeight);
+        }
+        
+        NSMutableArray *array = [NSMutableArray array];
+        for (BGSyntaxHighlightLineNumberView *lineNumberView in self.lineNumberViews) {
+            if(lineNumberView.frame.origin.y + kLineHeight < scrollView.contentOffset.y) {
+                [lineNumberView removeFromSuperview];
+                [array addObject:lineNumberView];
+            }
+        }
+        [self.recycleLineNumberViews addObjectsFromArray:array];
+        [self.lineNumberViews removeObjectsInArray:array];
+        
+        
+        self.viewingLinesRange = NSMakeRange(needsBottomLineNumber - self.viewingLinesRange.length, self.viewingLinesRange.length);
+    }
+    else {
+        // 上
+    }
+    
+    self.beforeContentOffsetY = y;
+    
 }
 
 @end

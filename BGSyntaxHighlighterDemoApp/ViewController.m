@@ -24,7 +24,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 
-    self.codeObject = [[BGCodeObject alloc] initWithCodeString:[NSBundle codeStringForResouce:@"mockObjective-C" ofType:@"txt"]];
+    self.codeObject = [[BGCodeObject alloc] initWithCodeString:[NSBundle codeStringForResouce:@"mockLongObjective-C" ofType:@"txt"]];
     self.syntaxHightlightView = [[BGSyntaxHighlightView alloc] initWithFrame:self.view.frame];
     self.syntaxHightlightView.codeObject = self.codeObject;
     [self.view addSubview:self.syntaxHightlightView];
