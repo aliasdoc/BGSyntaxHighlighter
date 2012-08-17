@@ -1,5 +1,5 @@
 platform :ios
-dependency 'GHUnitIOS'
-dependency 'OCMock'
-dependency 'TTTAttributedLabel'
-
+pod 'GHUnitIOS'
+pod 'OCMock'
+pod 'TTTAttributedLabel'
+pod 'NLTQuickCheck'
