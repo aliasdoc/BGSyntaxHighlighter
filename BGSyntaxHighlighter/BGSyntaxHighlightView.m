@@ -114,6 +114,7 @@
     BGSyntaxHighlightLineNumberView *view = [self dequeueReusableLineNumberView];
     if(!view) {
         view = [[BGSyntaxHighlightLineNumberView alloc] initWithFrame:CGRectZero];
+        NSLog(@"alloc");
     }
     view.lineNumber = row;
     return view;
@@ -138,8 +139,22 @@
     }
     
     CGFloat y = scrollView.contentOffset.y;
+    if(y <= 0 || y + scrollView.frame.size.height > [self.codeObject numberOfCodeLines] * kLineHeight) {
+        return;
+    }
+    
+    NSMutableArray *array = [NSMutableArray array];
+    for (BGSyntaxHighlightLineNumberView *lineNumberView in self.lineNumberViews) {
+        if(lineNumberView.frame.origin.y + kLineHeight < scrollView.contentOffset.y ||
+           lineNumberView.frame.origin.y > scrollView.contentOffset.y + scrollView.frame.size.height) {
+            [lineNumberView removeFromSuperview];
+            [array addObject:lineNumberView];
+        }
+    }
+    [self.recycleLineNumberViews addObjectsFromArray:array];
+    [self.lineNumberViews removeObjectsInArray:array];
+    
     if(y > self.beforeContentOffsetY) {
-        // 下
         NSInteger bottomLineNumber = self.viewingLinesRange.location + self.viewingLinesRange.length;
         NSInteger needsBottomLineNumber = (y + scrollView.frame.size.height) / kLineHeight;
         if(bottomLineNumber > needsBottomLineNumber) {
@@ -151,23 +166,26 @@
             [self.lineNumberScrollView addSubview:lineNumberView];
             lineNumberView.frame = CGRectMake(0, kLineHeight *  (i-1), kLineNumberWidth, kLineHeight);
         }
-        
-        NSMutableArray *array = [NSMutableArray array];
-        for (BGSyntaxHighlightLineNumberView *lineNumberView in self.lineNumberViews) {
-            if(lineNumberView.frame.origin.y + kLineHeight < scrollView.contentOffset.y) {
-                [lineNumberView removeFromSuperview];
-                [array addObject:lineNumberView];
-            }
-        }
-        [self.recycleLineNumberViews addObjectsFromArray:array];
-        [self.lineNumberViews removeObjectsInArray:array];
-        
-        
+
         self.viewingLinesRange = NSMakeRange(needsBottomLineNumber - self.viewingLinesRange.length, self.viewingLinesRange.length);
     }
-    else {
-        // 上
+    else if(y < self.beforeContentOffsetY){
+        NSInteger topLineNumber = self.viewingLinesRange.location;
+        NSInteger needsTopLineNumber = y / kLineHeight;
+        if(topLineNumber < needsTopLineNumber) {
+            return;
+        }
+        
+        for (NSInteger i = topLineNumber; i >= needsTopLineNumber; i--) {
+            BGSyntaxHighlightLineNumberView *lineNumberView = [self lineNumberViewAtRow:i];
+            [self.lineNumberViews addObject:lineNumberView];
+            [self.lineNumberScrollView addSubview:lineNumberView];
+            lineNumberView.frame = CGRectMake(0, kLineHeight * (i-1), kLineNumberWidth, kLineHeight);
+        }
+        
+        self.viewingLinesRange = NSMakeRange(needsTopLineNumber, self.viewingLinesRange.length);
     }
+
     
     self.beforeContentOffsetY = y;
     
