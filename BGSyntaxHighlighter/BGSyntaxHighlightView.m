@@ -69,17 +69,9 @@
     self.codeScrollView.frame = CGRectMake(kLineNumberWidth, 0, frame.size.width - kLineNumberWidth, frame.size.height);
     
     for(NSInteger i = 0; i < [self.codeObject numberOfCodeLines]; i++) {
-        BGSyntaxHighlightLineNumberView *lineNumberView = [[BGSyntaxHighlightLineNumberView alloc] initWithFrame:CGRectMake(0, 20*i, kLineNumberWidth, 20)];
-        lineNumberView.lineNumber = i + 1;
-        [self.lineNumberScrollView addSubview:lineNumberView];
-        [self.lineNumberViews addObject:lineNumberView];
+        [self makeAndLayoutLineAtRow:i + 1];
         
-        BGSyntaxHighlightLineView *lineView = [[BGSyntaxHighlightLineView alloc] initWithFrame:CGRectMake(0, 20*i, 800, 20)];
-        lineView.codeString = [self.codeObject codeStringForLineAtIndex:i];
-        [self.codeScrollView addSubview:lineView];
-        [self.lineViews addObject:lineView];
-        
-        if((i+1) * kLineHeight >= self.frame.size.height) {
+        if((i + 1) * kLineHeight >= self.frame.size.height) {
             self.viewingLinesRange = NSMakeRange(0U, i);
             break;
         }
