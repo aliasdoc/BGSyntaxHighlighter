@@ -37,8 +37,8 @@
 @synthesize viewingLinesRange = _viewingLinesRange;
 @synthesize beforeContentOffsetY = _beforeContentOffsetY;
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
+    
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
@@ -91,6 +91,7 @@
 
 #pragma mark - View Recycle
 - (BGSyntaxHighlightLineNumberView*)dequeueReusableLineNumberView {
+    
     if(self.recycleLineNumberViews && [self.recycleLineNumberViews count] > 0) {
         BGSyntaxHighlightLineNumberView *view = [self.recycleLineNumberViews anyObject];
         [self.recycleLineNumberViews removeObject:view];
@@ -101,6 +102,7 @@
 }
 
 - (BGSyntaxHighlightLineView*)dequeueReusableLineView {
+    
     if(self.recycleLineViews && [self.recycleLineViews count] > 0) {
         BGSyntaxHighlightLineView *view = [self.recycleLineViews anyObject];
         [self.recycleLineViews removeObject:view];
@@ -109,8 +111,33 @@
     return nil;
 }
 
+// TODO: 名前微妙かも
+// 「あるy系座標の組の外側に存在するビューをリサイクル」という意味
+- (void)recycleLinesOfOutsideFromRangeY:(NSRange)range {
+    
+    NSMutableArray *addingRecycleLineNumberViews = [NSMutableArray array];
+    NSMutableArray *addingRecycleLineViews = [NSMutableArray array];
+    for (NSUInteger i = 0, length = [self.lineNumberViews count]; i < length; i++) {
+        BGSyntaxHighlightLineNumberView *lineNumberView = [self.lineNumberViews objectAtIndex:i];
+        if(lineNumberView.frame.origin.y + kLineHeight < range.location ||
+           lineNumberView.frame.origin.y > range.location + range.length) {
+            [lineNumberView removeFromSuperview];
+            [addingRecycleLineNumberViews addObject:lineNumberView];
+            BGSyntaxHighlightLineView *lineView = [self.lineViews objectAtIndex:i];
+            [lineView removeFromSuperview];
+            [addingRecycleLineViews addObject:lineView];
+        }
+        
+    }
+    [self.recycleLineNumberViews addObjectsFromArray:addingRecycleLineNumberViews];
+    [self.lineNumberViews removeObjectsInArray:addingRecycleLineNumberViews];
+    [self.recycleLineViews addObjectsFromArray:addingRecycleLineViews];
+    [self.lineViews removeObjectsInArray:addingRecycleLineViews];
+}
+
 #pragma mark - View Create
 - (BGSyntaxHighlightLineNumberView*)lineNumberViewAtRow:(NSInteger)row {
+    
     BGSyntaxHighlightLineNumberView *view = [self dequeueReusableLineNumberView];
     if(!view) {
         view = [[BGSyntaxHighlightLineNumberView alloc] initWithFrame:CGRectZero];
@@ -121,6 +148,7 @@
 }
 
 -(BGSyntaxHighlightLineView*)lineViewAtRow:(NSInteger)row {
+    
     BGSyntaxHighlightLineView *view = [self dequeueReusableLineView];
     if(!view) {
         view = [[BGSyntaxHighlightLineView alloc] initWithFrame:CGRectZero];
@@ -129,8 +157,24 @@
     return view;
 }
 
+-(void)makeAndLayoutLineAtRow:(NSInteger)row {
+    
+    BGSyntaxHighlightLineNumberView *lineNumberView = [self lineNumberViewAtRow:row];
+    [self.lineNumberViews addObject:lineNumberView];
+    [self.lineNumberScrollView addSubview:lineNumberView];
+    lineNumberView.frame = CGRectMake(0, kLineHeight * (row-1), kLineNumberWidth, kLineHeight);
+    
+    
+    BGSyntaxHighlightLineView *lineView= [self lineViewAtRow:row];
+    [self.lineViews addObject:lineView];
+    [self.codeScrollView addSubview:lineView];
+    lineView.frame = CGRectMake(0, kLineHeight * (row-1), self.codeScrollView.frame.size.width, kLineHeight);
+}
+
+
 #pragma mark - UIScrollViewDelegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    
     if(self.lineNumberScrollView == scrollView) {
         self.codeScrollView.contentOffset = CGPointMake(self.codeScrollView.contentOffset.x, scrollView.contentOffset.y);
     }
@@ -143,16 +187,7 @@
         return;
     }
     
-    NSMutableArray *array = [NSMutableArray array];
-    for (BGSyntaxHighlightLineNumberView *lineNumberView in self.lineNumberViews) {
-        if(lineNumberView.frame.origin.y + kLineHeight < scrollView.contentOffset.y ||
-           lineNumberView.frame.origin.y > scrollView.contentOffset.y + scrollView.frame.size.height) {
-            [lineNumberView removeFromSuperview];
-            [array addObject:lineNumberView];
-        }
-    }
-    [self.recycleLineNumberViews addObjectsFromArray:array];
-    [self.lineNumberViews removeObjectsInArray:array];
+    [self recycleLinesOfOutsideFromRangeY:NSMakeRange(scrollView.contentOffset.y, scrollView.frame.size.height)];
     
     if(y > self.beforeContentOffsetY) {
         NSInteger bottomLineNumber = self.viewingLinesRange.location + self.viewingLinesRange.length;
@@ -161,10 +196,7 @@
             return;
         }
         for (NSInteger i = bottomLineNumber+1; i <= needsBottomLineNumber; i++) {
-            BGSyntaxHighlightLineNumberView *lineNumberView = [self lineNumberViewAtRow:i];
-            [self.lineNumberViews addObject:lineNumberView];
-            [self.lineNumberScrollView addSubview:lineNumberView];
-            lineNumberView.frame = CGRectMake(0, kLineHeight *  (i-1), kLineNumberWidth, kLineHeight);
+            [self makeAndLayoutLineAtRow:i];
         }
 
         self.viewingLinesRange = NSMakeRange(needsBottomLineNumber - self.viewingLinesRange.length, self.viewingLinesRange.length);
@@ -177,16 +209,11 @@
         }
         
         for (NSInteger i = topLineNumber; i >= needsTopLineNumber; i--) {
-            BGSyntaxHighlightLineNumberView *lineNumberView = [self lineNumberViewAtRow:i];
-            [self.lineNumberViews addObject:lineNumberView];
-            [self.lineNumberScrollView addSubview:lineNumberView];
-            lineNumberView.frame = CGRectMake(0, kLineHeight * (i-1), kLineNumberWidth, kLineHeight);
+            [self makeAndLayoutLineAtRow:i];
         }
         
         self.viewingLinesRange = NSMakeRange(needsTopLineNumber, self.viewingLinesRange.length);
     }
-
-    
     self.beforeContentOffsetY = y;
     
 }
