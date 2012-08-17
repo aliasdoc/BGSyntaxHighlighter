@@ -44,6 +44,7 @@
 		B954C32415DBE26B00E7FC4A /* BGSyntaxHighlightViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B954C32315DBE26B00E7FC4A /* BGSyntaxHighlightViewTests.m */; };
 		B954C32615DD2F9A00E7FC4A /* mockLongObjective-C.txt in Resources */ = {isa = PBXBuildFile; fileRef = B954C32515DD2F9A00E7FC4A /* mockLongObjective-C.txt */; };
 		B954C32715DD2F9F00E7FC4A /* mockLongObjective-C.txt in Resources */ = {isa = PBXBuildFile; fileRef = B954C32515DD2F9A00E7FC4A /* mockLongObjective-C.txt */; };
+		B954C33915DEE26800E7FC4A /* NSNumber+BGArbitrary.m in Sources */ = {isa = PBXBuildFile; fileRef = B954C33815DEE26800E7FC4A /* NSNumber+BGArbitrary.m */; };
 		B9948B9515D386EC0044015E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD2773142144B8CBB4F64ED /* libPods.a */; };
 		B9948B9615D386EC0044015E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BFD2773142144B8CBB4F64ED /* libPods.a */; };
 		B9948B9815D387890044015E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9948B9715D387890044015E /* CoreLocation.framework */; };
@@ -117,6 +118,8 @@
 		B954C2E915D8B7A700E7FC4A /* BGSyntaxHighlightLineViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightLineViewTests.m; sourceTree = "<group>"; };
 		B954C32315DBE26B00E7FC4A /* BGSyntaxHighlightViewTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSyntaxHighlightViewTests.m; sourceTree = "<group>"; };
 		B954C32515DD2F9A00E7FC4A /* mockLongObjective-C.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "mockLongObjective-C.txt"; sourceTree = "<group>"; };
+		B954C33715DEE26800E7FC4A /* NSNumber+BGArbitrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNumber+BGArbitrary.h"; sourceTree = "<group>"; };
+		B954C33815DEE26800E7FC4A /* NSNumber+BGArbitrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+BGArbitrary.m"; sourceTree = "<group>"; };
 		B9948B9715D387890044015E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B9948B9B15D387C30044015E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		B9948B9D15D387CA0044015E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -341,6 +344,8 @@
 				B954C2E315D818E100E7FC4A /* BGSyntaxHighlightLineNumberViewTest.m */,
 				B954C2E915D8B7A700E7FC4A /* BGSyntaxHighlightLineViewTests.m */,
 				B954C32315DBE26B00E7FC4A /* BGSyntaxHighlightViewTests.m */,
+				B954C33715DEE26800E7FC4A /* NSNumber+BGArbitrary.h */,
+				B954C33815DEE26800E7FC4A /* NSNumber+BGArbitrary.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -561,6 +566,7 @@
 				B954C2E415D818E100E7FC4A /* BGSyntaxHighlightLineNumberViewTest.m in Sources */,
 				B954C2EA15D8B7A700E7FC4A /* BGSyntaxHighlightLineViewTests.m in Sources */,
 				B954C32415DBE26B00E7FC4A /* BGSyntaxHighlightViewTests.m in Sources */,
+				B954C33915DEE26800E7FC4A /* NSNumber+BGArbitrary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,9 +675,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BGSyntaxHighlighter/BGSyntaxHighlighter-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
+				PODS_ROOT = "\"${PODS_ROOT}/BuildHeaders\" \"${PODS_ROOT}/BuildHeaders/GHUnitIOS\" \"${PODS_ROOT}/BuildHeaders/NLTQuickCheck\" \"${PODS_ROOT}/BuildHeaders/OCMock\" \"${PODS_ROOT}/BuildHeaders/TTTAttributedLabel\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
+				USER_HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 			};
 			name = Debug;
 		};
@@ -683,9 +690,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BGSyntaxHighlighter/BGSyntaxHighlighter-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
+				PODS_ROOT = "\"${PODS_ROOT}/BuildHeaders\" \"${PODS_ROOT}/BuildHeaders/GHUnitIOS\" \"${PODS_ROOT}/BuildHeaders/NLTQuickCheck\" \"${PODS_ROOT}/BuildHeaders/OCMock\" \"${PODS_ROOT}/BuildHeaders/TTTAttributedLabel\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
+				USER_HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 			};
 			name = Release;
 		};
@@ -695,18 +703,16 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/GHUnitIOS\"",
-					"\"${PODS_ROOT}/Headers/OCMock\"",
-					"\"${PODS_ROOT}/Headers/TTTAttributedLabel\"",
-				);
+				HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 				INFOPLIST_FILE = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
+				PODS_BUILD_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/BuildHeaders\" \"${PODS_ROOT}/BuildHeaders/GHUnitIOS\" \"${PODS_ROOT}/BuildHeaders/NLTQuickCheck\" \"${PODS_ROOT}/BuildHeaders/OCMock\" \"${PODS_ROOT}/BuildHeaders/TTTAttributedLabel\"";
+				PODS_HEADERS_SEARCH_PATHS = "${PODS_PUBLIC_HEADERS_SEARCH_PATHS}";
+				PODS_PUBLIC_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/NLTQuickCheck\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
+				USER_HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -717,19 +723,17 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/GHUnitIOS\"",
-					"\"${PODS_ROOT}/Headers/OCMock\"",
-					"\"${PODS_ROOT}/Headers/TTTAttributedLabel\"",
-				);
+				HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 				INFOPLIST_FILE = "BGSyntaxHighlighterTests/BGSyntaxHighlighterTests-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
+				PODS_BUILD_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/BuildHeaders\" \"${PODS_ROOT}/BuildHeaders/GHUnitIOS\" \"${PODS_ROOT}/BuildHeaders/NLTQuickCheck\" \"${PODS_ROOT}/BuildHeaders/OCMock\" \"${PODS_ROOT}/BuildHeaders/TTTAttributedLabel\"";
+				PODS_HEADERS_SEARCH_PATHS = "${PODS_PUBLIC_HEADERS_SEARCH_PATHS}";
+				PODS_PUBLIC_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/NLTQuickCheck\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
+				USER_HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -740,18 +744,16 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/GHUnitIOS\"",
-					"\"${PODS_ROOT}/Headers/OCMock\"",
-					"\"${PODS_ROOT}/Headers/TTTAttributedLabel\"",
-				);
+				HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 				INFOPLIST_FILE = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Info.plist";
 				OTHER_LDFLAGS = "-ObjC";
+				PODS_BUILD_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/BuildHeaders\" \"${PODS_ROOT}/BuildHeaders/GHUnitIOS\" \"${PODS_ROOT}/BuildHeaders/NLTQuickCheck\" \"${PODS_ROOT}/BuildHeaders/OCMock\" \"${PODS_ROOT}/BuildHeaders/TTTAttributedLabel\"";
+				PODS_HEADERS_SEARCH_PATHS = "${PODS_PUBLIC_HEADERS_SEARCH_PATHS}";
+				PODS_PUBLIC_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/NLTQuickCheck\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
+				USER_HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -762,19 +764,17 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Prefix.pch";
-				HEADER_SEARCH_PATHS = (
-					"\"${PODS_ROOT}/Headers\"",
-					"\"${PODS_ROOT}/Headers/GHUnitIOS\"",
-					"\"${PODS_ROOT}/Headers/OCMock\"",
-					"\"${PODS_ROOT}/Headers/TTTAttributedLabel\"",
-				);
+				HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 				INFOPLIST_FILE = "BGSyntaxHighlighterDemoApp/BGSyntaxHighlighterDemoApp-Info.plist";
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
+				PODS_BUILD_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/BuildHeaders\" \"${PODS_ROOT}/BuildHeaders/GHUnitIOS\" \"${PODS_ROOT}/BuildHeaders/NLTQuickCheck\" \"${PODS_ROOT}/BuildHeaders/OCMock\" \"${PODS_ROOT}/BuildHeaders/TTTAttributedLabel\"";
+				PODS_HEADERS_SEARCH_PATHS = "${PODS_PUBLIC_HEADERS_SEARCH_PATHS}";
+				PODS_PUBLIC_HEADERS_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/NLTQuickCheck\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
 				PODS_ROOT = "${SRCROOT}/Pods";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"${PODS_ROOT}/Headers\" \"${PODS_ROOT}/Headers/GHUnitIOS\" \"${PODS_ROOT}/Headers/OCMock\" \"${PODS_ROOT}/Headers/TTTAttributedLabel\"";
+				USER_HEADER_SEARCH_PATHS = "${PODS_HEADERS_SEARCH_PATHS}";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

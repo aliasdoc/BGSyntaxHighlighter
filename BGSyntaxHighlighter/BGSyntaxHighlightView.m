@@ -119,8 +119,8 @@
     NSMutableArray *addingRecycleLineViews = [NSMutableArray array];
     for (NSUInteger i = 0, length = [self.lineNumberViews count]; i < length; i++) {
         BGSyntaxHighlightLineNumberView *lineNumberView = [self.lineNumberViews objectAtIndex:i];
-        if(lineNumberView.frame.origin.y + kLineHeight < range.location ||
-           lineNumberView.frame.origin.y > range.location + range.length) {
+        if(lineNumberView.frame.origin.y + kLineHeight <= range.location ||
+           lineNumberView.frame.origin.y >= range.location + range.length) {
             [lineNumberView removeFromSuperview];
             [addingRecycleLineNumberViews addObject:lineNumberView];
             BGSyntaxHighlightLineView *lineView = [self.lineViews objectAtIndex:i];
