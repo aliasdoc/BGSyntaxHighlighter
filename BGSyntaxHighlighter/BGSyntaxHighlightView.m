@@ -175,7 +175,7 @@
     }
     
     CGFloat y = scrollView.contentOffset.y;
-    if(y <= 0 || y + scrollView.frame.size.height > [self.codeObject numberOfCodeLines] * kLineHeight) {
+    if(y <= 0 || y + scrollView.frame.size.height >= [self.codeObject numberOfCodeLines] * kLineHeight) {
         return;
     }
     
