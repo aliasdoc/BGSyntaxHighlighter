@@ -69,16 +69,15 @@
     self.codeScrollView.frame = CGRectMake(kLineNumberWidth, 0, frame.size.width - kLineNumberWidth, frame.size.height);
     
     for(NSInteger i = 0; i < [self.codeObject numberOfCodeLines]; i++) {
-        [self makeAndLayoutLineAtRow:i + 1];
+        [self makeAndLayoutLineAtRow:i + 1 insertFirst:NO];
         
         if((i + 1) * kLineHeight >= self.frame.size.height) {
-            self.viewingLinesRange = NSMakeRange(0U, i);
+            self.viewingLinesRange = NSMakeRange(0U, i+1);
             break;
         }
     }
     self.lineNumberScrollView.contentSize = CGSizeMake(kLineNumberWidth, kLineHeight * [self.codeObject numberOfCodeLines]);
     self.codeScrollView.contentSize = CGSizeMake(800, kLineHeight * [self.codeObject numberOfCodeLines]);
-    
 }
 
 #pragma mark - View Recycle
@@ -147,16 +146,26 @@
     return view;
 }
 
--(void)makeAndLayoutLineAtRow:(NSInteger)row {
+-(void)makeAndLayoutLineAtRow:(NSInteger)row insertFirst:(BOOL)insertFirst {
     
     BGSyntaxHighlightLineNumberView *lineNumberView = [self lineNumberViewAtRow:row];
-    [self.lineNumberViews addObject:lineNumberView];
+    if(insertFirst) {
+        [self.lineNumberViews insertObject:lineNumberView atIndex:0];
+    }
+    else {
+        [self.lineNumberViews addObject:lineNumberView];
+    }
     [self.lineNumberScrollView addSubview:lineNumberView];
     lineNumberView.frame = CGRectMake(0, kLineHeight * (row-1), kLineNumberWidth, kLineHeight);
     
     
     BGSyntaxHighlightLineView *lineView= [self lineViewAtRow:row];
-    [self.lineViews addObject:lineView];
+    if(insertFirst) {
+        [self.lineViews insertObject:lineView atIndex:0];
+    }
+    else {
+        [self.lineViews addObject:lineView];        
+    }
     [self.codeScrollView addSubview:lineView];
     lineView.frame = CGRectMake(0, kLineHeight * (row-1), self.codeScrollView.frame.size.width, kLineHeight);
 }
@@ -180,30 +189,34 @@
     [self recycleLinesOfOutsideFromRangeY:NSMakeRange(scrollView.contentOffset.y, scrollView.frame.size.height)];
     
     if(y > self.beforeContentOffsetY) {
-        NSInteger bottomLineNumber = self.viewingLinesRange.location + self.viewingLinesRange.length;
-        NSInteger needsBottomLineNumber = (y + scrollView.frame.size.height) / kLineHeight;
-        if(bottomLineNumber > needsBottomLineNumber) {
+        NSInteger bottomLineNumber = self.viewingLinesRange.location + self.viewingLinesRange.length + 1;
+        NSInteger needsBottomLineNumber = (y + scrollView.frame.size.height) / kLineHeight + 1;
+        if(bottomLineNumber >= needsBottomLineNumber) {
             return;
         }
-        for (NSInteger i = bottomLineNumber+1; i <= needsBottomLineNumber; i++) {
-            [self makeAndLayoutLineAtRow:i];
+        for (NSInteger i = bottomLineNumber; i <= needsBottomLineNumber; i++) {
+            [self makeAndLayoutLineAtRow:i insertFirst:NO];
         }
-
-        self.viewingLinesRange = NSMakeRange(needsBottomLineNumber - self.viewingLinesRange.length, self.viewingLinesRange.length);
     }
     else if(y < self.beforeContentOffsetY){
         NSInteger topLineNumber = self.viewingLinesRange.location;
         NSInteger needsTopLineNumber = y / kLineHeight;
-        if(topLineNumber < needsTopLineNumber) {
+        if(topLineNumber <= needsTopLineNumber) {
             return;
         }
         
         for (NSInteger i = topLineNumber; i >= needsTopLineNumber; i--) {
-            [self makeAndLayoutLineAtRow:i];
+            [self makeAndLayoutLineAtRow:i insertFirst:YES];
         }
         
-        self.viewingLinesRange = NSMakeRange(needsTopLineNumber, self.viewingLinesRange.length);
     }
+    
+    BGSyntaxHighlightLineNumberView *firstLineNumberView = [self.lineNumberViews objectAtIndex:0];
+    BGSyntaxHighlightLineNumberView *lastLineNumberView  = [self.lineNumberViews lastObject];
+    NSInteger location = firstLineNumberView.frame.origin.y / kLineHeight;
+    NSInteger length = lastLineNumberView.frame.origin.y / kLineHeight - location;
+    self.viewingLinesRange = NSMakeRange(location, length);
+
     self.beforeContentOffsetY = y;
 }
 

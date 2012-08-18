@@ -33,7 +33,10 @@
 }
 
 - (NSString *)codeStringForLineAtIndex:(NSInteger)index {
-    return [self.lines objectAtIndex:index];
+    if(index < [self.lines count]) {
+        return [self.lines objectAtIndex:index];
+    }
+    return nil;
 }
 
 - (NSString *)maximumLengthStringForCodeLines {

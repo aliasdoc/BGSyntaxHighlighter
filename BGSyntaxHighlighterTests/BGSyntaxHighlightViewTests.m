@@ -68,10 +68,17 @@
     [view.lineNumberScrollView scrollRectToVisible:CGRectMake(0, 180, 320, 100) animated:NO];
     GHAssertEquals(5U, [view.lineNumberViews count], @"ぴったりで移動するのでやっぱり5個ある");
     GHAssertEquals(5U, [view.lineViews count], @"ぴったりで移動するのでやっぱり5個ある");
+}
+
+- (void)testPiledRenderingVies {
     
-    [view.lineNumberScrollView scrollRectToVisible:CGRectMake(0, 185, 320, 100) animated:NO];
-    GHAssertEquals(5U, [view.lineNumberViews count], @"すこしずれて移動するので下に1個余分に追加されて6個になる");
-    GHAssertEquals(5U, [view.lineViews count], @"すこしずれて移動するので下に1個余分に追加されて6個になる");
+    view.frame = CGRectMake(0, 0, 320, 100);
+    [view layoutSubviews];
+    
+    [view.lineNumberScrollView scrollRectToVisible:CGRectMake(0, 190, 320, 100) animated:NO];
+    GHAssertEquals(6U, [view.lineNumberViews count], @"すこしずれて移動するので下に1個余分に追加されて6個になる");
+    GHAssertEquals(6U, [view.lineViews count], @"すこしずれて移動するので下に1個余分に追加されて6個になる");
+
 }
 
 - (BOOL)propRecycleLogic:(NSNumber*)y {
