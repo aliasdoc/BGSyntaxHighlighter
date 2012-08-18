@@ -70,7 +70,7 @@
     GHAssertEquals(5U, [view.lineViews count], @"ぴったりで移動するのでやっぱり5個ある");
 }
 
-- (void)testPiledRenderingVies {
+- (void)testMisalignRenderingVies {
     
     view.frame = CGRectMake(0, 0, 320, 100);
     [view layoutSubviews];
