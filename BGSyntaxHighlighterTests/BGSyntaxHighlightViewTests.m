@@ -58,10 +58,10 @@
     GHVerifyView(view);
 }
 
-- (void)testBufferingView
+- (void)testRenderingViews
 {
     view.frame = CGRectMake(0, 0, 320, 100);
-    GHVerifyView(view);
+    [view layoutSubviews];
     GHAssertEquals(5U, [view.lineNumberViews count], @"100/20=5で初期段階で5個ある");
     GHAssertEquals(5U, [view.lineViews count], @"100/20=5で初期段階で5個ある");
     

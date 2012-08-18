@@ -87,7 +87,6 @@
     if(self.recycleLineNumberViews && [self.recycleLineNumberViews count] > 0) {
         BGSyntaxHighlightLineNumberView *view = [self.recycleLineNumberViews anyObject];
         [self.recycleLineNumberViews removeObject:view];
-        NSLog(@"dequeued maxviews %d", [self.lineNumberViews count]);
         return view;
     }
     return nil;
@@ -133,7 +132,6 @@
     BGSyntaxHighlightLineNumberView *view = [self dequeueReusableLineNumberView];
     if(!view) {
         view = [[BGSyntaxHighlightLineNumberView alloc] initWithFrame:CGRectZero];
-        NSLog(@"alloc");
     }
     view.lineNumber = row;
     return view;
@@ -207,7 +205,6 @@
         self.viewingLinesRange = NSMakeRange(needsTopLineNumber, self.viewingLinesRange.length);
     }
     self.beforeContentOffsetY = y;
-    
 }
 
 @end
